@@ -4,7 +4,7 @@ const MODERN_ACTIVITY = 15;
 const HALF_LIFE_PERIOD = 5730;
 const K = 0.693 / HALF_LIFE_PERIOD;
 const isAdequateValue = (value) => (0 < value && value < MODERN_ACTIVITY);
-const isString = (value) => (typeof (value) == typeof (''));
+const isString = (str) => (typeof str === 'string');
 
 module.exports = function dateSample(str = 0) {
   const activity = parseFloat(str);
